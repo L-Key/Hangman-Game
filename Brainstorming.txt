@@ -1,0 +1,22 @@
+AVATAR THEME: "Aangman: The last Hang-bender"
+Background: Black w/ an airbender blue for pop
+
+Index Page -> Choose your class & name
+	Classes give different abilities (Gain a letter, gain extra guesses, etc)
+	Create a character name/password or select an old character (require password)
+
+Hangman page -> You versus Aing with blank word in the middle
+	Aang -> Top right *triangle
+	You -> bottom left *triangle
+	Center -> Blank underlines for letters *no border
+		Word generation?
+	Guessed letters *top Left
+	Abilities *bottom right
+	Missing letters draws parts to a spell,
+		when the spell is fully cast you die.
+		Aang's spell cast's in the background for each missed letter *right side
+		Your spell cast's in the background for each correct letter & completes on guessing the word *left side
+
+Win Page / Lose Page -> Leaderboard to keep track of stats 
+	gain pts for a win & lose points for a loss
+
