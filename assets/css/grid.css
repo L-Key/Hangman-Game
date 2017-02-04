@@ -94,3 +94,9 @@
 
 	/*Styles reguarding Box Model aesthetics for HEADER*/
 	.headerBox{}
+
+	/*Resizes images to fit there containers*/
+	.resize{
+		max-width:100%;
+		height:auto;
+	}
