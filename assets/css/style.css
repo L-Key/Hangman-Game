@@ -1,0 +1,123 @@
+/*GRID STYLES*/
+/*Sets Body to full page to pushing footer down*/
+.wrapper{
+	/*min-height: calc(100vh - 30px);*/
+	background:black;
+}
+
+@font-face{
+	font-family:'herculanum';
+	src:local('herculanum'),url('herculanum.ttf')
+}
+
+/*Styles for outlines around elements*/
+.outline{
+	background-color:/*Replace*/;
+	border-color:/*Replace*/;
+	border-style:solid;
+	border-width:/*Replace*/;
+}
+
+/*Styles reguarding visual aesthetics for ROW*/
+.rowVisual{
+	background-color:/*Replace*/;
+}
+
+/*Styles reguard text aesthetics for ROW*/
+.rowText{
+	font-family:/*Replace*/;
+	color:/*Replace*/;
+	line-height:/*Replace*/;
+	font-size:/*Replace*/;
+}
+
+/*Styles reguarding Box Model aesthetics for ROW*/
+.rowBox{
+	padding:10px;
+}
+
+/*Styles reguarding visual aesthetics for COL*/
+.colVisual{}
+
+/*Styles reguard text aesthetics for COL*/
+.colText1{
+	font-family:"herculanum";
+	color:white;
+	font-size:24px;
+	text-align:center;
+}
+.colText2{
+	font-family:"herculanum";
+	color:white;
+	font-size:12px;
+	text-align:center;
+}
+.colBox{
+	padding:5px;
+}
+
+/*Styles reguarding visual aesthetics for FOOTER*/
+.footerVisual{}
+
+/*Styles reguarding Box Model aesthetics for FOOTER*/
+.footerBox{
+}
+
+/*Styles reguarding visual aesthetics for HEADER*/
+.headerVisual{}
+
+.headerText{
+	font-family:"herculanum";
+	font-size:36px;
+	color:white;
+	text-align:center;
+}
+
+/*Styles reguarding Box Model aesthetics for HEADER*/
+.headerBox{
+}
+
+/*Resizes images to fit there containers*/
+.resize{
+	max-width:100%;
+	height:auto;
+}
+
+/*For empty divs and @media queries*/
+.empty{}
+.elementPic{
+	border-style:solid;
+	border-width:5px;
+	border-color:transparent;
+	box-sizing:border-box;
+}
+.elementPic:hover{
+	border-color:white;
+}
+
+#buttons{}
+.buttons{
+	width:30px;
+	height:30px;
+	border-style:solid;
+	padding:2px;
+	margin:2px;
+	border-width:3px;
+	border-color:white;
+	color:white;
+	background-color:black;
+}
+
+#word{}
+.word{
+	float:left;
+	color:white;
+	padding:2px;
+	height:30px;
+	width:30px;
+}
+
+
+.height25{min-height: calc(100vh - 75vh);}
+.height33{min-height: calc(100vh - 66.66vh);}
+.height50{min-height: calc(100vh - 50vh);}
