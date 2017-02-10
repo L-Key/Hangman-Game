@@ -107,15 +107,27 @@
 	color:white;
 	background-color:black;
 }
-
+#guessCounter{}
 #word{}
+#picture{}
 .word{
 	float:left;
-	color:white;
+	color:transparent;
+	border-style:solid;
+	border-color:white;
+	border-bottom-width:3px;
+	margin:5px;
 	padding:2px;
 	height:30px;
 	width:30px;
 }
+.guessed{
+	border-color:red;
+}
+.visible{
+	color:white;
+}
+.guess{}
 
 
 .height25{min-height: calc(100vh - 75vh);}
