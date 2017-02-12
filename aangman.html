@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 <body class="wrapper">
 	<div class="grid-container">
@@ -20,15 +21,14 @@
 		</div>
 		<div class="row height50">
 			<div class="col-1"></div>
-			<div class="col-5 colText1" id="word"></div>
+			<div class="col-5 colText1">
+				<div id="word"></div>
+				<progress id="health" value="100" max="100">Health</progress>
+				<h1 class="colText2">Incorrect Guesses</h1>
+				<p class="colText2" id="guessCounter">0</p>
+			</div>
 			<div class="col-5" id="picture"></div>
 			<div class="col-1"></div>
-			<div class="row">
-				<div class="col-12">
-					<h1 class="colText2">Incorrect Guesses</h1>
-					<p class="colText2" id="guessCounter">0</p>
-				</div>
-			</div>
 		</div>
 		<div class="row height25">
 			<div class="col-1"></div>
@@ -45,70 +45,8 @@
 	<!-- Bottom Left Player Pic -->
 	<!-- Bottom Right Abilities -->
 	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript">
-		//Adds button guess letters to row #buttons
-		var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-		for(i=0; i<letters.length; i++){
-			letterBtn = $("<button>");
-			letterBtn.addClass("buttons");
-			letterBtn.attr("value", letters[i]);
-			letterBtn.html(letters[i]);
-			$("#buttons").append(letterBtn);
-		}
-
-		// Generate a word from the list & add to row #word
-		// http://www.setgetgo.com/randomword/
-		var words = ['AANG', 'ZUKO', 'KATARA', 'TOPH', 'SOKKA', 'AZULA', 'IROH', 'ASAMI', 'APPA', 'OZAI', 'ZHAO', 'BUMI'];
-		var word = words[Math.floor(Math.random()*words.length)];
-		for(i=0; i<word.length; i++){
-			letter = $("<div>");
-			letter.addClass("word");
-			letter.addClass("word-"+word[i]);
-			letter.attr("value", word[i]);
-			letter.html(word[i]);
-			$("#word").append(letter);
-		}
-
-		// Get response from buttons
-		var guess;
-		var guessCounter = 0;
-		var guessBool = false;
-		var counter=0;
-		$(".buttons").on("click",function(){
-			guess = $(this).attr('value');
-			console.log(guess);
-			// Make button unusable
-
-			// check to see if a guess is correct
-			for(i=0; i<word.length; i++){
-				// if guess IS correct
-				if(guess == word[i]){
-					guessBool = true;
-					$(".word-"+word[i]).addClass("visible");
-					counter++;
-					console.log(counter+" counter")
-					// check if whole word is guessed
-					if(word.length <= counter){
-						console.log("word is guessed.");
-						// Make all buttons usable again
-					}
-				}
-			}
-
-			// If guess is incorrect
-			if(guessBool == false){
-				guessCounter++;
-				$("#guessCounter").html(guessCounter);
-				guessBool = false;
-			}
-			else{
-				guessBool = false;
-			}
-		});
-
-
-
-	</script>
+	
 </body>
+<!-- Include afer body so shit doesnt fuck up -->
+<script src="assets/javascript/game.js"></script>
 </html>

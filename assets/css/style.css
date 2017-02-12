@@ -80,7 +80,7 @@
 /*Resizes images to fit there containers*/
 .resize{
 	max-width:100%;
-	height:auto;
+	max-height:400px;
 }
 
 /*For empty divs and @media queries*/
@@ -93,6 +93,10 @@
 }
 .elementPic:hover{
 	border-color:white;
+}
+
+#health{
+	background-color:red;
 }
 
 #buttons{}
